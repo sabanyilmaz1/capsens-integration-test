@@ -33,7 +33,7 @@ export const Form = () => {
     <div className="md:py-12 xl:px-0 lg:px-6 py-6 px-6">
       <section className="2xl:max-w-[1200px] md:max-w-[1024px] 2xl:p-12 md:p-8 p-6 w-full mx-auto border border-primary-blue rounded-lg bg-white text-black">
         <div className="flex flex-col md:gap-4 gap-2">
-          <h1 className="font-semibold 2xl:text-[39px] lg:text-[32px] md:text-2xl text-xl leading-none md:leading-[54px] md:tracking-[-2px] tracking-[-1px]">
+          <h1 className="font-semibold 2xl:text-[39px] lg:text-[32px] md:text-2xl text-xl leading-none md:leading-[54px] md:tracking-[-2px] tracking-[-1px] text-pretty">
             Je crée mon compte{" "}
             <span className="text-primary-blue">en tant que ...</span>
           </h1>
