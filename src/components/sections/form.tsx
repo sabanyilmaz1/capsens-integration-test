@@ -31,9 +31,9 @@ export const Form = () => {
   const [accountType, setAccountType] = useState(radioData[0].label);
   return (
     <div className="md:py-12 md:px-0 py-6 px-6">
-      <section className="md:max-w-[1200px] 2xl:p-12 md:p-8 p-6 w-full mx-auto border border-primary-blue rounded-lg bg-white text-black">
+      <section className="2xl:max-w-[1200px] md:max-w-[1024px] 2xl:p-12 md:p-8 p-6 w-full mx-auto border border-primary-blue rounded-lg bg-white text-black">
         <div className="flex flex-col md:gap-4 gap-2">
-          <h1 className="font-semibold 2xl:text-[39px] lg:text-[32px] md:text-2xl text-xl leading-none md:tracking-[-2px] tracking-[-1px]">
+          <h1 className="font-semibold 2xl:text-[39px] lg:text-[32px] md:text-2xl text-xl leading-none md:leading-[54px] md:tracking-[-2px] tracking-[-1px]">
             Je crée mon compte{" "}
             <span className="text-primary-blue">en tant que ...</span>
           </h1>
@@ -46,8 +46,13 @@ export const Form = () => {
         <form
           onSubmit={(e) => {
             e.preventDefault();
+            //Desolé pour la petite blague :)
+            window.open(
+              "https://www.youtube.com/watch?v=xvFZjo5PgG0&list=RDxvFZjo5PgG0&start_radio=1",
+              "_blank"
+            );
           }}
-          className="2xl:mt-12 mt-6 flex flex-col 2xl:gap-8 gap-4"
+          className="2xl:mt-12 mt-6 flex flex-col 2xl:gap-8 gap-6"
         >
           {/* First Radio button */}
           <InlineRadioButton
@@ -58,11 +63,11 @@ export const Form = () => {
           {/* Ou section */}
           <div className="flex items-center md:gap-4 gap-2">
             <hr className="w-full border-grey" />
-            <h3 className="text-sm font-semibold text-black">Ou</h3>
+            <h3 className="text-sm text-black">ou</h3>
             <hr className="w-full border-grey" />
           </div>
           {/* Three Radio buttons */}
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-5 md:mb-4 mb-2">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-5 ">
             {radioData.slice(1, 4).map((item) => (
               <CardRadioButton
                 key={item.label}

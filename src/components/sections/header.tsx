@@ -30,7 +30,7 @@ export const Header = () => {
           alt="logo"
           width={167}
           height={48}
-          className="md:h-12 h-6 md:w-auto w-24"
+          className="md:h-12 h-6 md:w-[167px] w-24"
         />
         <ProfilInfo />
       </div>
