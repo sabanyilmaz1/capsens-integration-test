@@ -12,11 +12,12 @@ export const InlineRadioButton = ({
   return (
     <label
       htmlFor={item.label}
-      className={`flex justify-center items-center md:gap-12 gap-6 border rounded-lg xl:p-6 md:p-4 p-2 ${
-        accountType === item.label
-          ? "border-primary-blue bg-tertiary-blue"
-          : "border-grey"
-      }`}
+      className={`flex justify-center items-center md:gap-12 gap-6 border rounded-lg xl:p-6 md:p-4 p-3 animation-hover
+         ${
+           accountType === item.label
+             ? "border-primary-blue bg-tertiary-blue"
+             : "border-grey"
+         }`}
     >
       <input
         type="radio"
@@ -56,7 +57,7 @@ export const CardRadioButton = ({
   return (
     <label
       htmlFor={item.label}
-      className={`flex-1 flex flex-col justify-center md:gap-6 gap-4 items-center border rounded-lg xl:p-6 md:p-4 p-3 ${
+      className={`flex-1 flex flex-col justify-center md:gap-6 gap-4 items-center border rounded-lg xl:p-6 md:p-4 p-3 animation-hover ${
         accountType === item.label
           ? "border-primary-blue bg-tertiary-blue"
           : "border-grey"

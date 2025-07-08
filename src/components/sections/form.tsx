@@ -30,10 +30,10 @@ export const radioData = [
 export const Form = () => {
   const [accountType, setAccountType] = useState(radioData[0].label);
   return (
-    <div className="md:py-12 py-4 px-6">
-      <section className="md:max-w-[1200px] px-6 2xl:p-12 md:p-8 p-4 w-full mx-auto border border-primary-blue rounded-lg bg-white text-black">
-        <div className="flex flex-col 2xl:gap-4 gap-2">
-          <h1 className="font-semibold 2xl:text-[39px] lg:text-[32px] md:text-2xl text-xl md:leading-14 leading-none md:tracking-[-2px] tracking-[-1px]">
+    <div className="md:py-12 md:px-0 py-6 px-6">
+      <section className="md:max-w-[1200px] 2xl:p-12 md:p-8 p-6 w-full mx-auto border border-primary-blue rounded-lg bg-white text-black">
+        <div className="flex flex-col md:gap-4 gap-2">
+          <h1 className="font-semibold 2xl:text-[39px] lg:text-[32px] md:text-2xl text-xl leading-none md:tracking-[-2px] tracking-[-1px]">
             Je crée mon compte{" "}
             <span className="text-primary-blue">en tant que ...</span>
           </h1>
@@ -43,7 +43,12 @@ export const Form = () => {
           </h2>
         </div>
         {/* Radio buttons */}
-        <form className="2xl:mt-12 mt-6 flex flex-col 2xl:gap-8 gap-4">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+          }}
+          className="2xl:mt-12 mt-6 flex flex-col 2xl:gap-8 gap-4"
+        >
           {/* First Radio button */}
           <InlineRadioButton
             item={radioData[0]}
@@ -57,7 +62,7 @@ export const Form = () => {
             <hr className="w-full border-grey" />
           </div>
           {/* Three Radio buttons */}
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-5 md:mb-4 mb-2">
             {radioData.slice(1, 4).map((item) => (
               <CardRadioButton
                 key={item.label}

@@ -23,7 +23,7 @@ const ProfilInfo = () => {
 
 export const Header = () => {
   return (
-    <header role="banner" className="w-full border-b border-grey">
+    <header role="banner" className="w-full border-b border-grey bg-white">
       <div className="flex items-center justify-between md:h-24 h-16 layout-header">
         <Image
           src="/logo/capsens_logo.svg"

@@ -3,7 +3,7 @@ import React from "react";
 
 export const WaveFooter = () => {
   return (
-    <footer className="bg-light-grey relative hidden md:block">
+    <footer className="relative hidden md:block">
       <Image
         src="/wave.svg"
         alt="wave-footer"
