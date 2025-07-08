@@ -30,20 +30,20 @@ export const radioData = [
 export const Form = () => {
   const [accountType, setAccountType] = useState(radioData[0].label);
   return (
-    <div className="md:py-12">
-      <section className="md:max-w-[1200px] 2xl:p-12 md:p-8 p-6 w-full mx-auto border border-primary-blue rounded-lg bg-white text-black">
+    <div className="md:py-12 py-4 px-6">
+      <section className="md:max-w-[1200px] px-6 2xl:p-12 md:p-8 p-4 w-full mx-auto border border-primary-blue rounded-lg bg-white text-black">
         <div className="flex flex-col 2xl:gap-4 gap-2">
-          <h1 className="font-semibold 2xl:text-[39px] lg:text-[32px] text-2xl leading-14 tracking-[-2px]">
+          <h1 className="font-semibold 2xl:text-[39px] lg:text-[32px] md:text-2xl text-xl md:leading-14 leading-none md:tracking-[-2px] tracking-[-1px]">
             Je crée mon compte{" "}
             <span className="text-primary-blue">en tant que ...</span>
           </h1>
-          <h2 className="text-sm black">
+          <h2 className="text-sm md:text-base black">
             Choisissez dès maintenant si vous souhaitez investir en tant que
             particulier ou en tant que personne morale.
           </h2>
         </div>
         {/* Radio buttons */}
-        <form className="2xl:mt-12 mt-8 flex flex-col 2xl:gap-8 gap-6">
+        <form className="2xl:mt-12 mt-6 flex flex-col 2xl:gap-8 gap-4">
           {/* First Radio button */}
           <InlineRadioButton
             item={radioData[0]}
@@ -51,7 +51,7 @@ export const Form = () => {
             setAccountType={setAccountType}
           />
           {/* Ou section */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center md:gap-4 gap-2">
             <hr className="w-full border-grey" />
             <h3 className="text-sm font-semibold text-black">Ou</h3>
             <hr className="w-full border-grey" />

@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen">
       <Header />
-      <main className="bg-light-grey min-h-[calc(100vh-200px)]">
+      <main className="bg-light-grey md:min-h-[calc(100vh-200px)] min-h-[calc(100vh-100px)]">
         <Form />
       </main>
       <WaveFooter />
