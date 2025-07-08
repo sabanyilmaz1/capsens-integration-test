@@ -12,7 +12,7 @@ export const InlineRadioButton = ({
   return (
     <label
       htmlFor={item.label}
-      className={`flex justify-center items-center gap-4 border rounded-lg xl:p-6 md:p-4 p-2 ${
+      className={`flex justify-center items-center gap-12 border rounded-lg xl:p-6 md:p-4 p-2 ${
         accountType === item.label
           ? "border-primary-blue bg-tertiary-blue"
           : "border-grey"
@@ -27,10 +27,12 @@ export const InlineRadioButton = ({
         checked={accountType === item.label}
         onChange={(e) => setAccountType(e.target.value)}
       />
-      <Image src={item.icon} alt={item.label} width={30} height={35} />
-      <div className="w-full">
-        <p className="font-semibold">{item.label}</p>
-        <p className="text-sm text-gray-500">{item.description}</p>
+      <div className="flex items-center gap-6 w-full">
+        <Image src={item.icon} alt={item.label} width={30} height={35} />
+        <div className="w-full">
+          <p className="font-semibold">{item.label}</p>
+          <p className="text-sm text-gray-500">{item.description}</p>
+        </div>
       </div>
     </label>
   );

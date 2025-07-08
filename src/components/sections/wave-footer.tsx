@@ -3,11 +3,11 @@ import React from "react";
 
 export const WaveFooter = () => {
   return (
-    <footer className="bg-light-grey">
+    <footer className="bg-light-grey relative">
       <Image
         src="/wave.svg"
         alt="wave-footer"
-        className="w-full md:min-h-[102px]"
+        className="w-full "
         width={100}
         height={100}
       />

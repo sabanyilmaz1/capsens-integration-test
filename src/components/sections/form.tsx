@@ -31,7 +31,7 @@ export const Form = () => {
   const [accountType, setAccountType] = useState(radioData[0].label);
   return (
     <div className="md:py-12">
-      <section className="md:max-w-[1200px] 2xl:p-12 xl:p-8 p-6 w-full mx-auto border border-primary-blue rounded-lg bg-white text-black">
+      <section className="md:max-w-[1200px] 2xl:p-12 md:p-8 p-6 w-full mx-auto border border-primary-blue rounded-lg bg-white text-black">
         <div className="flex flex-col 2xl:gap-4 gap-2">
           <h1 className="font-semibold 2xl:text-[39px] lg:text-[32px] text-2xl leading-14 tracking-[-2px]">
             Je crée mon compte{" "}
@@ -57,7 +57,7 @@ export const Form = () => {
             <hr className="w-full border-grey" />
           </div>
           {/* Three Radio buttons */}
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-5">
             {radioData.slice(1, 4).map((item) => (
               <CardRadioButton
                 key={item.label}
