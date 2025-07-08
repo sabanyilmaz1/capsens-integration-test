@@ -1,5 +1,27 @@
 import Image from "next/image";
 
+const InputRadio = ({
+  item,
+  accountType,
+  setAccountType,
+}: {
+  item: { label: string; description: string; icon: string };
+  accountType: string;
+  setAccountType: (value: string) => void;
+}) => {
+  return (
+    <input
+      type="radio"
+      id={item.label}
+      name="account-type"
+      className="w-[22px] h-[22px] accent-primary-blue"
+      value={item.label}
+      checked={accountType === item.label}
+      onChange={(e) => setAccountType(e.target.value)}
+    />
+  );
+};
+
 export const InlineRadioButton = ({
   item,
   accountType,
@@ -19,14 +41,10 @@ export const InlineRadioButton = ({
              : "border-grey"
          }`}
     >
-      <input
-        type="radio"
-        id={item.label}
-        name="account-type"
-        className="w-[22px] h-[22px]"
-        value={item.label}
-        checked={accountType === item.label}
-        onChange={(e) => setAccountType(e.target.value)}
+      <InputRadio
+        item={item}
+        accountType={accountType}
+        setAccountType={setAccountType}
       />
       <div className="flex items-center md:gap-6 gap-3 w-full">
         <Image
@@ -77,14 +95,10 @@ export const CardRadioButton = ({
             : "border-grey"
         }`}
     >
-      <input
-        type="radio"
-        id={item.label}
-        name="account-type"
-        className="w-[22px] h-[22px]"
-        value={item.label}
-        checked={accountType === item.label}
-        onChange={(e) => setAccountType(e.target.value)}
+      <InputRadio
+        item={item}
+        accountType={accountType}
+        setAccountType={setAccountType}
       />
       <div className="flex flex-col items-center gap-1 xl:gap-4 md:gap-2">
         <Image
