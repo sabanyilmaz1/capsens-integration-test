@@ -1,12 +1,13 @@
+import { Form } from "@/components/sections/form";
 import { Header } from "@/components/sections/header";
 import { WaveFooter } from "@/components/sections/wave-footer";
 
 export default function Home() {
   return (
-    <div className="w-full relative">
+    <div className="w-full relative min-h-screen">
       <Header />
-      <main className="h-[calc(100vh-160px)] md:h-[calc(100vh-190px)] xl:h-[calc(100vh-196px)] bg-light-grey">
-        g
+      <main className="bg-light-grey">
+        <Form />
       </main>
       <WaveFooter />
     </div>
